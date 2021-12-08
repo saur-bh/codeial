@@ -1,13 +1,16 @@
 module.exports.profile = function(req,res){
 
-    return res.end('<H1>I am in Profile Page </H1>') ;
+    return res.render('user_profile',{
+        title: "I AM PROFILE "
+    })
 
     
 }
 
 module.exports.users = function(req,res){
 
-    return res.end('<H1>Add Any user Aye !!</H1>') ;
-
+    return res.render('users',{
+        title: "I AM USER "
+    })
     
 }

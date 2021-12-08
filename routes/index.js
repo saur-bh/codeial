@@ -7,6 +7,6 @@ console.log('INFO: Router loaded.')
 
 router.get('/',homeController.home)
 router.use('/users', require('./user'))
-router.use('/users', require('./post'))
+//router.use('/users', require('./post'))
 
 module.exports = router
