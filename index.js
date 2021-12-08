@@ -8,6 +8,14 @@ const port = 8000;
 app.use('/', require('./routes/index')) ; 
 
 
+//Set up view engine : install ejs 
+
+app.set('view engine', 'ejs');
+app.set('views','./views')
+
+
+
+
 // Listen the server 
 app.listen(port,(err)=>{
 
