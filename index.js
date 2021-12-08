@@ -12,7 +12,9 @@ app.use(express.static('./assets')) ;
 
 app.use(expressLayouts);
 
-
+//For Script and CSS
+app.set("layout extractScripts", true)
+app.set("layout extractStyles", true)
 
 // user express route
 
