@@ -4,9 +4,15 @@ const port = 8000;
 const expressLayouts = require('express-ejs-layouts')
 
 
-//First thing
+//for assets
+
+app.use(express.static('./assets')) ;
+
+//For  layouts
 
 app.use(expressLayouts);
+
+
 
 // user express route
 
