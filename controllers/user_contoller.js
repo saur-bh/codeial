@@ -33,12 +33,9 @@ module.exports.signup = function(req,res){
     
 }
 
-
 module.exports.userCreate =function(req,res){
 
-        res.redirect('home',{
-            title:"User Created"
-        })
+       return  res.send('<H1>I am creating here User </H1>')
     //TODO
 
 }
@@ -47,6 +44,7 @@ module.exports.session =function(req,res){
 
 
     //TODO
+    return res.send('<H1>I am creating seesion here </H1>')
 
 }
 
