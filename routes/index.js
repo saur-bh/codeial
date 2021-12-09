@@ -6,6 +6,7 @@ console.log('INFO: Router loaded.')
 
 
 router.get('/',homeController.home)
+router.get('/signup',require('./signup'))
 router.use('/users', require('./user'))
 router.use('/users/profile', require('./post'))
 
