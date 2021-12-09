@@ -1,7 +1,13 @@
 module.exports.profile = function(req,res){
 
+
+    // Cookies that have not been signed
+  console.log('Cookies: ', req.cookies)
+  res.cookie('user_id:',"TSESSSS") // to add
+  res.cookie('TeST:',"MNNEW") // to add
     return res.render('user_profile',{
         title: "I AM PROFILE "
+
     })
 
     
