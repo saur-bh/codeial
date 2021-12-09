@@ -6,6 +6,9 @@ const userContoller = require('../controllers/user_contoller')
 console.log('INFO: Home Router loaded.')
 router.get('/',userContoller.users)
 router.get('/profile',userContoller.profile);
+router.get('/login',userContoller.login);
+router.get('/signup',userContoller.signup);
+
 
 
 module.exports = router ;
