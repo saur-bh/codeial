@@ -8,6 +8,7 @@ router.get('/',userContoller.users)
 router.get('/profile',userContoller.profile);
 router.get('/login',userContoller.login);
 router.get('/signup',userContoller.signup);
+router.post('/create',userContoller.userCreate);
 
 
 

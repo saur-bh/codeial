@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // connect to db 
-mongoose.connect('mongodb+srv://admin:admin@contacts-list.qvt9b.mongodb.net/contacts-list?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://admin:admin@cluster0.dsax9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 
 // acruie the connection 
 const db= mongoose.connection ;
