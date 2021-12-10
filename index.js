@@ -7,6 +7,9 @@ const app= express();
 const port = 8000;
 
 
+// url encoding 
+app.use(express.urlencoded())
+
 // user cookie
 app.use(cookieParser());
 

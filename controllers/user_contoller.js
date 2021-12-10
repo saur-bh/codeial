@@ -1,3 +1,4 @@
+const User = require('../models/user')
 module.exports.profile = function(req,res){
 
 
@@ -31,7 +32,7 @@ module.exports.login = function(req,res){
 }
 
 module.exports.signup = function(req,res){
-
+    
     return res.render('signup',{
         title:"Sign-Up"
     }) ;
@@ -41,8 +42,31 @@ module.exports.signup = function(req,res){
 
 module.exports.userCreate =function(req,res){
 
-       return  res.send('<H1>I am creating here User </H1>')
-    //TODO
+        console.log(req.body);
+    // TODO :Code for creating user in dataBase 
+        if(req.body.password != req.body.confirm_password){return res.redirect('back');}
+     
+       if(User.findOne({email:req.body.email}, function (err, user) {
+
+            if(err){console.log('Culd not located user in dataBase',err); return;}
+
+            if(!user){
+                User.create(req.body,function(err,user){
+
+                    if(err){console.log('Could not create user, check DB',err); return;}
+
+                    return res.redirect('/users/login') ;
+
+
+                });
+            }else{
+                res.send('ddddddddd') ;
+            }
+
+
+       }));
+
+       
 
 }
 
